@@ -20,7 +20,7 @@ COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json
 RUN sudo chown -R coder:coder /home/coder/.local
 
 RUN sudo apt update --fix-missing
-RUN sudo apt install && apt upgrade
+RUN sudo apt upgrade
 RUN sudo apt install wget curl
 RUN sudo wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 RUN sudo export NVM_DIR="$HOME/.nvm"
